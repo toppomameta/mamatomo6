@@ -1,0 +1,12 @@
+<div class="col-md-12">
+  <h1>twitter記事一覧</h1>
+  <% @tweets.each do |tweet| %>
+    <div class="article">
+      <p><%= truncate(tweet.description, length: 50) %></p>
+      <!-- <p>画像：<%=  %></p> -->
+      <p>カテゴリ：<%= tweet.category %></p>
+      <p>作成日：<%= tweet.created_at %></p>
+      <p><%= link_to "続きを読む", tweet, class: "btn btn-default" %></p>
+    </div>
+  <% end %>
+</div>
