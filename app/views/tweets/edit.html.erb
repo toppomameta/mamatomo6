@@ -13,6 +13,10 @@
       <%= form.label "本文" %>
       <%= form.text_area :description, class: "form-control" %>
     </div>
+    <div>
+    <strong>Image:</strong>
+    <%= image_tag @tweet.image %>
+   </div>
     <%= form.submit '更新する', class: "btn btn-primary" %>
   <% end %>
 </div>
