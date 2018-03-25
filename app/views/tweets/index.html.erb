@@ -8,6 +8,7 @@
   </ul>
 
   <!-- タブ内容 -->
+  <h1>twitter記事一覧</h1>
   <div class="tab-content">
   	<div class="tab-pane" id="sampleContentA">
   		<p>タブＡの内容</p>
@@ -32,7 +33,7 @@
       <% if tweet.category == 2 then %>
         <div class="article">
           <p>投稿：<%= truncate(tweet.description, length: 50) %></p>
-          <!-- <p>画像：<%=  %></p> -->
+          <!-- <p>画像：</p> -->
           <p>作成日：<%= tweet.created_at.strftime('%Y年%m月%d日 %H:%M:%S') %></p>
           <p>
             <%= image_tag tweet.image, size: "50x50" %>
@@ -61,10 +62,6 @@
       <% end %>
   	</div>
   </div>
-
-
-
-
 <!--nav_area-->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   <ul class="nav navbar-nav navbar-left">
@@ -75,8 +72,6 @@
   </ul>
  </div>
  <!--//nav_area-->
-  <h1>twitter記事一覧</h1>
-  <% byebug %>
   <% @tweets.each do |tweet| %>
   <p>Category -> <%= tweet.category %></p>
     <div class="article">
