@@ -7,8 +7,8 @@
       <p>カテゴリ：<%= tweet.category %></p>
       <p>作成日：<%= tweet.created_at %></p>
       <p>
-        <strong>Tweet:</strong>
-        <%= image_tag tweet.image %>
+        <%= image_tag tweet.image, size: "50x50" %>
+        <%= tweet.user.nick_name %>
       </p>
       <p><%= link_to "続きを読む", tweet, class: "btn btn-default" %></p>
     </div>

@@ -6,10 +6,8 @@
   <p>
     <%= simple_format(@tweet.description) %>
   </p>
-  <p>
-  <strong>Tweet:</strong>
-  <%= image_tag @tweet.image %>
-  </p>
+  <p><%= image_tag @tweet.image %></p>
+  <p>ニックネーム：<%= @tweet.user.nick_name %></p>
   <hr>
   <%= link_to "編集", edit_tweet_path(@tweet), class: "btn btn-default" %>
   <%= link_to "削除", tweet_path(@tweet), class: "btn btn-default", method: :delete %>

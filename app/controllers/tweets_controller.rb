@@ -38,6 +38,6 @@ class TweetsController < ApplicationController
   private
 
   def tweet_params # ストロングパラメータを定義する
-    params.require(:tweet).permit(:description, :image, :category, :user_id)
+    params.require(:tweet).permit(:description, :image, :user_id, :category, :nick_name)
   end
 end
